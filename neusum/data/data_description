@@ -1,0 +1,40 @@
+Every line is an individual sample
+Rules: Constituency Parsing Tree:
+Deletable: PP SBAR ADVP ADJP S(except for root)
+, **** ,    # no punctuations allowed inside
+            # maxium chunk allowed = 10
+- **** - 
+' *** ' inside or outside
+"  ****** " inside or outside
+
+NER layer may be added
+
+THRESHOLD_CHUNK_SIZE = 5    # only consider deleting if chunk size > THRESHOLD_CHUNK_SIZE
+
+
+
+DATASET:
+CNN
+90266
+1220
+1093
+=92579
+
+92465
+
+DM
+196961
+12148
+10397
+219506
+
+VoteNet:
+Encoder:
+Just encoding original sentence, 
+or encoding different version 
+
+General data preprocessing pipeline:
+Constituency Parser generates parsing trees [stanfordnlp]
+according to specific rules, generate deletable chunks and compression versions 
+[gramma: PP SBAR etc; Ungramma: size>=5]
+using rouge and desired supervision rules, generate oracle data

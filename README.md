@@ -1,9 +1,17 @@
 
-# Neural Extractive Text Summarization with Syntactic Compression (EMNLP19)
+# Neural Extractive Text Summarization with Syntactic Compression (EMNLP 2019)
 
 Author: Jiacheng Xu & Greg Durrett; UT Austin.
  
 Preprint version available at arXiv: https://arxiv.org/abs/1902.00863
+
+Slides: 
+
+Compression Rules in Python:
+
+NYT Split: 
+
+Model Output: CNN, DM, CNNDM, NYT
 
 
 ## Citation
